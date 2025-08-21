@@ -1,60 +1,53 @@
+/* 外側はフル幅（背景透明） */
 .topbar {
-    /* 背景色設定 */
-    background-color: #666;
+    background: transparent;
+    padding: 0 12px; /* ビューポート端との最小余白 */
 }
 
-.topbar ul {
-    /* 表示幅を90%に */
-    width: 90%;
-    /* フレックスボックス化 */
-    display: flex;
-    /* 先頭のポチをなくす */
-    list-style: none;
-    /* 余白の自動調整 （上下の余白は0、左右は自動調整）*/
-    margin: 0 auto;
-    /* 高さを50pxに指定 */
-    height: 50px;
-    /* 左右の配置 */
-    justify-content: space-between;
-    align-items: center;
+/* 中画面以上での余白 */
+/* @media screen and (min-width: 768px) {
+        .topbar { padding: 12px 24px; }
+} */
+
+/* 内側ラッパー: 背景と最大幅制御 */
+.topbar-inner {
+        background-color: #666; /* ここに背景を移動 */
+        max-width: 1200px; /* 必要なら var(--page-width) */
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 32px; /* コンテンツ内側余白 */
+        border-radius: 0 0 12px 12px; /* 上をフラット / 下だけ角丸 */
+        box-sizing: border-box;
+}
+@media (max-width: 767px) {
+    .topbar-inner { padding: 0 16px; }
 }
 
-/* 左側のアイテム */
-.topbar .left-side {
-    display: flex;
-}
+/* 内側ラッパー: 中央寄せ & 最大幅制限 */
+/* 既存定義を上書き（上で再定義済） */
 
-/* 右側のアイテムグループ */
-.topbar .right-side {
-    display: flex;
+/* 左右リスト共通 */
+.topbar .nav-left,
+.topbar .nav-right {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 24px;
 }
 
-.topbar .right-side li {
-    list-style: none;
-}
+.topbar .nav-left span { font-size: 1.2rem; font-weight: 600; color: #fff; }
 
-.topbar a {
-    /* アンダーライン削除 */
-    text-decoration: none;
-    /* 文字色設定 */
-    color: #fff;
-    /* 内側余白を上右下左の順で設定 */
-    padding: 10px 20px 10px 0px;
-    /*ブロックにする */
-    display: block;
-    /* 文字を大き目に設定 */
-    font-size: large;
-}
+/* リンク */
+.topbar .nav-right a { color: #fff; text-decoration: none; font-size: 1rem; padding: 8px 4px; display: inline-block; }
+.topbar .nav-right a:hover { color: #ddd; }
 
-.topbar a:hover {
-    /* マウスオーバーした時の文字色を設定 */
-    color: #aaa;
-}
+/* 旧 a スタイルは nav-right に統合 */
 
-/*スマホ対応*/
+/* スマホ対応
 @media screen and (max-width: 640px) {
     .topbar {
         background-color: #0183a0;
@@ -69,4 +62,4 @@
     .topbar li {
         border-bottom: solid 1px #fff;
     }
-}
+} */

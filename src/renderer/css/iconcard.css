@@ -1,0 +1,110 @@
+/* 外側フル幅 + 端余白 */
+.profile-card-outer {
+  padding: 16px 12px; /* viewport edge spacing */
+}
+@media (min-width:768px){
+  .profile-card-outer { padding: 32px 24px; }
+}
+
+/* 中央寄せカード */
+.profile-card {
+  background-color: #cccccc;
+  border-radius: 20px;
+  position: relative;
+  width: 256px;
+  height: 372px;
+  margin: 0 auto; /* 中央寄せ */
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.profile-card .overlap-group {
+  background-color: #959595;
+  border-radius: 110px;
+  height: 220px;
+  left: 21px;
+  position: absolute;
+  top: 19px;
+  width: 220px;
+}
+
+.profile-card .ellipse {
+  height: 210px;
+  left: 5px;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+  width: 210px;
+}
+
+.profile-card .prime-twitter {
+  aspect-ratio: 1;
+  height: 35px;
+  left: 46px;
+  position: absolute;
+  top: 309px;
+  width: 35px;
+}
+
+.profile-card .vector {
+  height: 40px;
+  left: 106px;
+  position: absolute;
+  top: 304px;
+  width: 41px;
+}
+
+.profile-card .simple-icons-zenn {
+  aspect-ratio: 1;
+  height: 39px;
+  left: 172px;
+  position: absolute;
+  top: 305px;
+  width: 39px;
+}
+
+.profile-card .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+.profile-card .social-icons i {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-card .social-icons i:hover {
+  color: #007bff;
+}
+
+.profile-card .img {
+  height: 38px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 39px;
+}
+
+.profile-card .text-wrapper {
+  color: #000000;
+  font-family: "IBM Plex Mono-Regular", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  height: 49px;
+  left: 64px;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 243px;
+  width: 128px;
+}

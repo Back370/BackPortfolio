@@ -3,11 +3,13 @@ import '../css/topbar.css';
 function TopBar() {
   return (
     <nav className="topbar">
-      <ul>
-        <li className="left-side">
-          <a href="./index.html">Back</a>
-        </li>
-        <div className="right-side">
+      <div className="topbar-inner">
+        <ul className="nav-left">
+          <li>
+            <span>Back</span>
+          </li>
+        </ul>
+        <ul className="nav-right">
           <li>
             <a href="./index.html">Profile</a>
           </li>
@@ -17,8 +19,8 @@ function TopBar() {
           <li>
             <a href="./contact.html">Contact</a>
           </li>
-        </div>
-      </ul>
+        </ul>
+      </div>
     </nav>
   );
 }

@@ -4,10 +4,8 @@
     padding: 0 12px; /* ビューポート端との最小余白 */
 }
 
-/* 中画面以上での余白 */
-/* @media screen and (min-width: 768px) {
-        .topbar { padding: 12px 24px; }
-} */
+
+
 
 /* 内側ラッパー: 背景と最大幅制御 */
 .topbar-inner {

@@ -1,9 +1,6 @@
 /* 外側フル幅 + 端余白 */
-.profile-card-outer {
-  padding: 16px 12px; /* viewport edge spacing */
-}
-@media (min-width:768px){
-  .profile-card-outer { padding: 32px 24px; }
+.profile-card-outer { /* intro-row でパディング管理するためリセット */
+  padding: 0;
 }
 
 /* 中央寄せカード */
@@ -13,10 +10,13 @@
   position: relative;
   width: 256px;
   height: 372px;
-  margin: 0 auto; /* 中央寄せ */
+  /* トップバー内側パディング(PC 32px / SP 16px)と揃える */
+  margin-top: 0;
   padding: 12px;
   box-sizing: border-box;
 }
+
+@media (max-width: 767px) { }
 
 .profile-card .overlap-group {
   background-color: #959595;

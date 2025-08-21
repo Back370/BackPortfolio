@@ -1,0 +1,16 @@
+.intro-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 32px 0; /* 同じ左右ガター */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* 狭い幅では縦積み */
+}
+@media (max-width: 767px) {
+  .intro-row { padding: 24px 16px 0; gap: 32px; }
+}
+
+/* IconCard の余計な左マージンを無効化（横並び用）*/
+.intro-row .profile-card { margin-left: 0 !important; }

@@ -1,0 +1,4 @@
+.timeline-wrapper { position:relative; }
+.timeline-line { position:absolute; left:50%; top:0; transform:translateX(-50%); width:4px; height:100%; background:linear-gradient(to bottom,#4c85f0,#1444bc); border-radius:2px; }
+/* optional spacing tweaks for desktop */
+@media (max-width:1023px){ .timeline-line { display:none; } }

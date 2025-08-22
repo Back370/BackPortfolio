@@ -13,6 +13,7 @@ import './css/intro.css';
 import ProjectsTimeline from './components/ProjectsTimeline';
 import './css/routefade.css';
 import Footer from './components/Footer';
+import CareerPage from './components/CareerPage';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -38,10 +39,10 @@ function AnimatedRoutes() {
             }
           />
           <Route
-            path="/"
+            path="/career"
             element={
               <div className="fade-in route-pane">
-                <Profile />
+                <CareerPage />
               </div>
             }
           />

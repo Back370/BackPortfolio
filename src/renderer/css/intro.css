@@ -1,19 +1,19 @@
 .intro-row {
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 32px 0; /* 同じ左右ガター */
+  padding: 24px 32px 0; /* ややコンパクト */
   box-sizing: border-box;
-  flex-wrap: wrap; /* 狭い幅では縦積み */
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  .intro-row { padding: 24px 16px 0; gap: 32px; }
+  .intro-row { padding: 16px 16px 0; gap: 28px; }
 }
 
 /* IconCard の余計な左マージンを無効化（横並び用）*/
 .intro-row .profile-card { margin-left: 0 !important; }
 
 /* 右側可変領域 */
-.intro-row .route-container { flex: 1; min-width: 320px; }
+.intro-row .route-container { flex: 1; min-width: 320px; max-width: 780px; }

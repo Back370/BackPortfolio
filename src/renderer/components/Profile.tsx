@@ -31,6 +31,8 @@ function Profile() {
           NxTEND
           <br />
           TAIR
+          <br />
+          NITMic
         </div>
 
         <br />
@@ -47,22 +49,22 @@ function Profile() {
         </div>
 
         <div className="skill-group">
-          <h3 className="group-title">Other</h3>
-          <div className="icon-row">
-            {skillIcon('blender')}
-            {skillIcon('docker')}
-            {skillIcon('figma')}
-            {skillIcon('css')}
-          </div>
-        </div>
-
-        <div className="skill-group">
           <h3 className="group-title">SUB</h3>
           <div className="icon-row">
             {skillIcon('java')}
             {skillIcon('typescript')}
             {skillIcon('javascript')}
             {skillIcon('html')}
+          </div>
+        </div>
+
+        <div className="skill-group">
+          <h3 className="group-title">Other</h3>
+          <div className="icon-row">
+            {skillIcon('blender')}
+            {skillIcon('docker')}
+            {skillIcon('figma')}
+            {skillIcon('css')}
           </div>
         </div>
       </div>

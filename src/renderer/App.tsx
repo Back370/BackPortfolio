@@ -12,6 +12,7 @@ import Profile from './components/Profile';
 import './css/intro.css';
 import ProjectsTimeline from './components/ProjectsTimeline';
 import './css/routefade.css';
+import Footer from './components/Footer';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -53,8 +54,11 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <TopBar />
-      <AnimatedRoutes />
+      <div className="app-root">
+        <TopBar />
+        <AnimatedRoutes />
+        <Footer />
+      </div>
     </Router>
   );
 }

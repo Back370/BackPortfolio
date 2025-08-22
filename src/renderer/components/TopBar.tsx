@@ -27,6 +27,15 @@ function TopBar() {
               Projects
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="/career"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Career
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

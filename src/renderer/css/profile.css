@@ -15,7 +15,7 @@
   .intro-row > .profile { gap: 32px; padding-bottom: 32px; }
 }
 
-.belong-skills-section { flex: 1 1 260px; min-width: 240px; background: #f5f5f5; padding: 24px 24px 32px; border-radius: 16px; box-sizing: border-box; }
+.belong-skills-section { flex: 1 1 260px; min-width: 800px; background: #f5f5f5; padding: 24px 24px 32px; border-radius: 16px; box-sizing: border-box; }
 
 .section-title { font-size: 28px; font-weight: 600; margin: 0 0 24px; font-family: "IBM Plex Mono", monospace; }
 .group-title { font-size: 20px; font-weight: 600; margin: 0 0 12px; }

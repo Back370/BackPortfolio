@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScrollEffects } from '../hooks/useScrollEffects';
-import Works from './Works';
 import PageTop from './PageTop';
+import ProjectsTimeline from './ProjectsTimeline';
 
 function Portfolio() {
   useScrollEffects();
@@ -9,7 +9,7 @@ function Portfolio() {
   return (
     <div className="wrapper">
       <main className="content">
-        <Works />
+        <ProjectsTimeline />
         <PageTop />
       </main>
     </div>

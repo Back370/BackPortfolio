@@ -6,6 +6,7 @@ import TopBar from './components/TopBar';
 import IconCard from './components/IconCard';
 import Profile from './components/Profile';
 import './css/intro.css';
+import ProjectsTimeline from './components/ProjectsTimeline';
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       <TopBar />
       <div className="intro-row">
         <IconCard />
-        <Profile />
+        {/* <Profile /> */}
+        <ProjectsTimeline />
       </div>
       <Routes>
         <Route path="/" element={<Portfolio />} />

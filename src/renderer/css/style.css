@@ -160,43 +160,8 @@ li {
   opacity: .8;
 }
 
-/*--------------------------------
- Works
----------------------------------*/
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-}
 
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
-}
 
-.works-item:hover {
-  opacity: .9;
-}
-
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.works-img img {
-  border: 1px solid #e6e6e6;
-}
-
-.works-name {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.works-info {
-  font-size: 10px;
-}
 
 /*--------------------------------
  Skill
@@ -410,62 +375,6 @@ li {
 
   .gnav-logo {
     font-size: 15px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 12px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /* Works */
-  .works-name {
-    font-size: 10px;
-  }
-
-  .works-list {
-    justify-content: space-between;
-  }
-
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  /* Skill */
-  .skill-list {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .skill-item {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-
-  .skill-item:last-child {
-    margin-bottom: 0;
-  }
-
-  /* About */
-  .profile {
-    display: block;
-  }
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
-
-  .profile-body p:not(:last-child) {
-    margin-bottom: 20px;
   }
 
   /* フッター */

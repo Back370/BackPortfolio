@@ -3,7 +3,6 @@ import iWidgetkawaii from '../img/widgetkawaii.png';
 import iChap from '../img/chap.jpg';
 import iCoyote from '../img/coyote.jpg';
 import iOekaki from '../img/oekaki.jpg';
-import '../css/projectcard.css';
 
 interface WorkItem {
   id: number;
@@ -53,6 +52,7 @@ function Works() {
   return (
     <section className="works section" id="works">
       <div className="inner">
+        <h2 className="title">works</h2>
         <div className="works-list">
           {worksData.map((work) => (
             <div key={work.id} className="works-item">

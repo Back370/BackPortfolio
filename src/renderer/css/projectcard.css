@@ -11,3 +11,54 @@
   top: 0;
   width: 800px;
 }
+
+/* 縦並びに変更 */
+.works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* フル幅表示 */
+.works-item {
+  width: 100%;
+  margin: 0;
+  color: #333;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.works-item:hover {
+  opacity: .9;
+}
+
+/* 3列レイアウト用ルール不要になったため削除 */
+
+.works-img img {
+  border: 1px solid #e6e6e6;
+}
+
+.works-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.works-info {
+  font-size: 10px;
+}
+
+.projects-background {
+  flex: 1 1 260px;
+  min-width: 240px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.projects-inner {
+  max-width: 1340px;
+  margin: 0 auto;
+}

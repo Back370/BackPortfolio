@@ -14,3 +14,6 @@
 
 /* IconCard の余計な左マージンを無効化（横並び用）*/
 .intro-row .profile-card { margin-left: 0 !important; }
+
+/* 右側可変領域 */
+.intro-row .route-container { flex: 1; min-width: 320px; }

@@ -1,4 +1,5 @@
 import '../css/topbar.css';
+import { NavLink } from 'react-router-dom';
 
 function TopBar() {
   return (
@@ -11,13 +12,20 @@ function TopBar() {
         </ul>
         <ul className="nav-right">
           <li>
-            <a href="./index.html">Profile</a>
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Profile
+            </NavLink>
           </li>
           <li>
-            <a href="./projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="./contact.html">Contact</a>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Projects
+            </NavLink>
           </li>
         </ul>
       </div>

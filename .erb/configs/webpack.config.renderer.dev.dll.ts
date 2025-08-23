@@ -31,7 +31,10 @@ const configuration: webpack.Configuration = {
   module: require('./webpack.config.renderer.dev').default.module,
 
   entry: {
-    renderer: Object.keys(dependencies || {}),
+    // bootstrap-icons は CSS/フォントのみで JS エントリが無く DLL 化で解決失敗するため除外
+    renderer: Object.keys(dependencies || {}).filter(
+      (dep) => dep !== 'bootstrap-icons',
+    ),
   },
 
   output: {

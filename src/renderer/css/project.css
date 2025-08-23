@@ -1,0 +1,94 @@
+
+/* intro-row 直下の profile セクション用（旧 style.css の .profile と区別） */
+.intro-row > .profile {
+  flex: 1 1 640px;
+  min-width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-bottom: 48px;
+}
+
+@media (max-width: 600px) {
+  .intro-row > .profile { gap: 32px; padding-bottom: 32px; }
+}
+
+.belong-skills-section { flex: 1 1 260px; min-width: 800px; background: #f5f5f5; padding: 24px 24px 32px; border-radius: 16px; box-sizing: border-box; }
+
+.section-title { font-size: 28px; font-weight: 600; margin: 0 0 24px; font-family: "IBM Plex Mono", monospace; }
+.group-title { font-size: 20px; font-weight: 600; margin: 0 0 12px; }
+
+.skill-group { margin-bottom: 28px; }
+.skill-group:last-of-type { margin-bottom: 0; }
+
+.icon-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.skill-icon { width: 48px; height: 48px; border-radius: 8px; background: #222; padding: 4px; box-sizing: border-box; }
+
+.belong-text { font-size: 16px; line-height: 1.6; white-space: pre-line; font-family: "IBM Plex Mono", monospace; }
+
+
+.profile .text-wrapper-4 {
+  color: #000000;
+  font-family: "IBM Plex Mono-Regular", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 54px;
+  left: 0;
+  letter-spacing: 0.30px;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  width: 191px;
+}
+
+/* ================= Notion-like Project Page ================= */
+.notion-page { display:flex; gap:48px; align-items:flex-start; position:relative; }
+.notion-toc { position:sticky; top:88px; width:220px; flex:0 0 220px; font-size:13px; line-height:1.5; max-height:calc(100vh - 120px); overflow:auto; padding:12px 12px 16px; border-radius:12px; background:#fafafa; border:1px solid #e5e7eb; }
+.notion-toc-title { font-weight:600; font-size:12px; letter-spacing:.5px; text-transform:uppercase; margin-bottom:8px; color:#555; }
+.notion-toc ul { list-style:none; padding:0; margin:0; }
+.notion-toc li { margin:4px 0; }
+.notion-toc a { color:#374151; text-decoration:none; display:block; padding:4px 6px 4px 8px; border-radius:6px; transition:background .15s, color .15s; }
+.notion-toc a:hover { background:#e8eef5; }
+.notion-toc a.active { background:#d1e3ff; color:#0f3d84; font-weight:600; }
+
+.notion-content { flex:1 1 auto; min-width:0; }
+.notion-section { margin:0 0 56px; padding-bottom:8px; border-bottom:1px solid rgba(0,0,0,0.06); }
+.notion-section:last-of-type { border-bottom:none; margin-bottom:0; }
+.notion-section h2 { font-size:24px; margin:0 0 12px; font-weight:600; letter-spacing:.5px; }
+.notion-section p { font-size:15px; line-height:1.7; margin:0 0 16px; }
+.notion-section p:last-child { margin-bottom:0; }
+
+.notion-list { margin:0 0 16px 0; padding-left:1.2em; }
+.notion-list li { font-size:15px; line-height:1.65; margin:4px 0; position:relative; }
+.notion-list li::marker { color:#6b7280; }
+.notion-list li strong { font-weight:600; }
+
+/* Scroll behavior & highlight (active link class may be toggled via JS later) */
+html { scroll-behavior:smooth; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .notion-page { flex-direction:column; }
+  .notion-toc { position:relative; top:0; width:100%; max-height:none; display:flex; flex-wrap:wrap; gap:4px 8px; background:#fff; border:1px solid #e5e7eb; }
+  .notion-toc ul { display:flex; flex-wrap:wrap; }
+  .notion-toc li { margin:0; }
+  .notion-toc a { padding:6px 10px; font-size:12px; }
+}
+
+/* Dark mode support (if parent .dark) */
+.dark .notion-toc { background:#1f242b; border-color:#343b44; color:#d2d8de; }
+.dark .notion-toc a { color:#d2d8de; }
+.dark .notion-toc a:hover { background:#2c3440; }
+.dark .notion-toc a.active { background:#1444bc; color:#fff; }
+.dark .notion-section { border-bottom:1px solid rgba(255,255,255,0.08); }
+.dark .notion-section h2 { color:#f1f5f9; }
+.dark .notion-section p, .dark .notion-list li { color:#d0d5da; }
+
+/* TOC right modifier */
+.notion-page--toc-right { flex-direction:row; }
+.notion-page--toc-right .notion-content { order:0; }
+.notion-page--toc-right .notion-toc { order:1; }
+
+

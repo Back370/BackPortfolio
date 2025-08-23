@@ -14,9 +14,30 @@ function IconCard() {
           />
         </div>
         <div className="social-icons">
-          <i className="bi bi-twitter-x" aria-label="X" />
-          <i className="bi bi-github" aria-label="github" />
-          <i className="bi bi-journal-text" aria-label="zenn" />
+          <a
+            aria-label="X"
+            href="https://x.com/back370"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-twitter-x" aria-hidden="true" />
+          </a>
+          <a
+            aria-label="GitHub"
+            href="https://github.com/Back370"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-github" aria-hidden="true" />
+          </a>
+          <a
+            aria-label="Zenn"
+            href="https://zenn.dev/back77"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-journal-text" aria-hidden="true" />
+          </a>
         </div>
         <div className="text-wrapper">Back</div>
       </div>

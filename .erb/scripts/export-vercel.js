@@ -4,15 +4,18 @@ const path = require('path');
 
 const root = path.join(__dirname, '../..');
 const rendererDist = path.join(root, 'release', 'app', 'dist', 'renderer');
-const outDir = path.join(root, 'build');
+const outDirBuild = path.join(root, 'build');
+const outDirPublic = path.join(root, 'public');
 
 if (!fs.existsSync(rendererDist)) {
   console.error('[export-vercel] renderer dist not found:', rendererDist);
   process.exit(1);
 }
 
-fs.rmSync(outDir, { recursive: true, force: true });
-fs.mkdirSync(outDir, { recursive: true });
+fs.rmSync(outDirBuild, { recursive: true, force: true });
+fs.mkdirSync(outDirBuild, { recursive: true });
+fs.rmSync(outDirPublic, { recursive: true, force: true });
+fs.mkdirSync(outDirPublic, { recursive: true });
 
 function copyDir(src, dest) {
   fs.readdirSync(src, { withFileTypes: true }).forEach((entry) => {
@@ -27,6 +30,7 @@ function copyDir(src, dest) {
   });
 }
 
-copyDir(rendererDist, outDir);
+copyDir(rendererDist, outDirBuild);
+copyDir(rendererDist, outDirPublic);
 
-console.log('[export-vercel] Copied renderer dist to build/.');
+console.log('[export-vercel] Copied renderer dist to build/ and public/.');

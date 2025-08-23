@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   useLocation,
+  Navigate,
 } from 'react-router-dom';
 import './css/ress.css';
 import './css/style.css';
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
       <IconCard />
       <div className="route-container flex-fill">
         <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navigate to="/projects" replace />} />
           <Route
             path="/projects"
             element={

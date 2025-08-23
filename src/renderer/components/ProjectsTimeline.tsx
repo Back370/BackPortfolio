@@ -24,7 +24,7 @@ function Works() {
       link: 'works-template.html',
       date: '2025-8-22',
       img: iChap,
-      content: 'テストコンテンツ',
+      content: '位置情報を利用して限定されたユーザー間で交流できるSNSです。',
     },
     {
       id: 2,
@@ -33,7 +33,8 @@ function Works() {
       link: 'works-template.html',
       date: '2025-8-22',
       img: iWidgetkawaii,
-      content: 'テストコンテンツ',
+      content:
+        'WidgetKawaiiはユーザーのスマートフォン上のウィジェットに動きあるキャラクターを追加し、日常的な癒し・インタラクション体験を提供するアプリです。',
     },
     {
       id: 3,
@@ -42,7 +43,8 @@ function Works() {
       link: 'works-template.html',
       date: '2025-8-22',
       img: iCoyote,
-      content: 'テストコンテンツ',
+      content:
+        'DeepCFRの考え方を取り入れたDQN学習とルールベースによるハイブリットなAIを作った',
     },
     {
       id: 4,
@@ -51,7 +53,7 @@ function Works() {
       link: 'works-template.html',
       date: '2025-8-22',
       img: iOekaki,
-      content: 'テストコンテンツ',
+      content: '描いた絵がカードとして使えるゲームです。',
     },
   ];
 

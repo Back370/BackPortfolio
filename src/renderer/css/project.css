@@ -53,7 +53,26 @@
 .notion-toc a:hover { background:#e8eef5; }
 .notion-toc a.active { background:#d1e3ff; color:#0f3d84; font-weight:600; }
 
-.notion-content { flex:1 1 auto; min-width:0; }
+.notion-content {
+  flex: 1 1 640px; /* profileと同じベース幅 */
+  min-width: 320px;
+  max-width: 1200px; /* さらに拡張 */
+  background: #f5f5f5; /* profile系背景に合わせる */
+  padding: 40px 48px 56px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  position: relative;
+  /* スクロール時の余白感 */
+  backdrop-filter: saturate(180%) contrast(1.02);
+}
+/* セクション境界が背景上で強すぎないよう微調整 */
+.notion-content .notion-section { border-color: rgba(0,0,0,0.05); }
+@media (max-width: 1024px) {
+  .notion-content { flex:1 1 auto; width:100%; padding:32px 28px 48px; }
+}
+@media (max-width: 600px) {
+  .notion-content { padding:28px 20px 40px; }
+}
 .notion-section { margin:0 0 56px; padding-bottom:8px; border-bottom:1px solid rgba(0,0,0,0.06); }
 .notion-section:last-of-type { border-bottom:none; margin-bottom:0; }
 .notion-section h2 { font-size:24px; margin:0 0 12px; font-weight:600; letter-spacing:.5px; }
@@ -90,5 +109,16 @@ html { scroll-behavior:smooth; }
 .notion-page--toc-right { flex-direction:row; }
 .notion-page--toc-right .notion-content { order:0; }
 .notion-page--toc-right .notion-toc { order:1; }
+
+/* Wide screen: 目次をさらに右へ寄せる */
+@media (min-width: 1280px) {
+  .notion-page--toc-right { gap: 40px; }
+  .notion-page--toc-right .notion-content { max-width: 1400px; }
+}
+@media (min-width: 1700px) {
+  .notion-page--toc-right .notion-content { max-width: 1560px; }
+  /* margin-left:auto を外しコンテンツ側を拡張 */
+  .notion-page--toc-right .notion-toc { margin-left: 0; }
+}
 
 

@@ -10,13 +10,14 @@ function ProjectPage() {
   const s = projects.find((p) => p.id === projectId) || projects[0];
   if (!s) return <div>プロジェクト情報がありません。</div>;
 
+  const hasDemo = !!(s.demo && s.demo.trim().length > 0);
   const toc = [
     { id: 'overview', label: '概要' },
     { id: 'belong', label: 'チーム開発' },
     { id: 'skill', label: '使用技術' },
     { id: 'features', label: '機能面' },
     { id: 'point', label: '開発のポイント' },
-    { id: 'demo', label: 'デモ' },
+    ...(hasDemo ? [{ id: 'demo', label: 'デモ' }] : []),
     { id: 'links', label: '外部リンク' },
   ];
 
@@ -71,15 +72,16 @@ function ProjectPage() {
           <h2>開発のポイント</h2>
           <p>{s.point}</p>
         </section>
-        <section id="demo" className="notion-section">
-          <h2>デモ / スクリーンショット</h2>
-          <p>
-            デプロイ先:{' '}
-            <a href={s.demo} target="_blank" rel="noreferrer">
-              {s.demo}
-            </a>
-          </p>
-        </section>
+        {hasDemo && (
+          <section id="demo" className="notion-section">
+            <h2>デモ / スクリーンショット</h2>
+            <p>
+              <a href={s.demo} target="_blank" rel="noreferrer">
+                {s.demo}
+              </a>
+            </p>
+          </section>
+        )}
         <section id="links" className="notion-section">
           <h2>外部リンク</h2>
           {s.link.includes('github.com/') ? (

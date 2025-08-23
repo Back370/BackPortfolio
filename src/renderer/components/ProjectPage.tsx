@@ -1,100 +1,97 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import '../css/project.css';
-import { projects } from '../data/project';
-
-const sections: Section[] = [
-  {
-    id: 'overview',
-    title: '概要',
-    body: (
-      <p>
-        入力した情報を基にQRコードを生成し、SNSのアカウントやWIFI情報等の雑多な情報の共有を簡易に行えるアプリ。
-      </p>
-    ),
-  },
-  {
-    id: 'team',
-    title: 'チーム開発',
-    body: <p>UIデザインを除く全ての開発工程を担当。</p>,
-  },
-  {
-    id: 'stack',
-    title: '使用技術',
-    body: (
-      <ul className="notion-list">
-        <li>
-          <strong>Python (Flask)</strong>:
-          チームメンバーの技術スタックに合わせ、簡易に開発できる Python を使用。
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: 'features',
-    title: '機能面',
-    body: (
-      <ul className="notion-list">
-        <li>QRコードの生成</li>
-        <li>生成したQRコードの保存（ブラウザストレージ保存）</li>
-        <li>保存されたQRの削除</li>
-        <li>指定したQRのポップアップ表示</li>
-      </ul>
-    ),
-  },
-  {
-    id: 'devpoints',
-    title: '開発のポイント',
-    body: (
-      <ul className="notion-list">
-        <li>
-          UIデザイン担当が作業しやすいよう、読みやすいプログラムを意識したコーディング
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: 'demo',
-    title: 'デモ / スクリーンショット',
-    body: (
-      <p>
-        デプロイ先:{' '}
-        <a
-          href="https://work-create-qr.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://work-create-qr.vercel.app/
-        </a>
-      </p>
-    ),
-  },
-  {
-    id: 'links',
-    title: '外部リンク',
-    body: <p>(準備中)</p>,
-  },
-];
+import { projects } from '../data/projects';
+import GitHubRepoCard from './GitHubRepoCard';
 
 function ProjectPage() {
+  const { id } = useParams();
+  const projectId = Number(id);
+  const s = projects.find((p) => p.id === projectId) || projects[0];
+  if (!s) return <div>プロジェクト情報がありません。</div>;
+
+  const toc = [
+    { id: 'overview', label: '概要' },
+    { id: 'belong', label: 'チーム開発' },
+    { id: 'skill', label: '使用技術' },
+    { id: 'features', label: '機能面' },
+    { id: 'point', label: '開発のポイント' },
+    { id: 'demo', label: 'デモ' },
+    { id: 'links', label: '外部リンク' },
+  ];
+
+  const featureList = s.features;
+
   return (
     <div className="notion-page notion-page--toc-right">
       <aside className="notion-toc">
         <div className="notion-toc-title">目次</div>
         <ul>
-          {sections.map((s) => (
-            <li key={s.id}>
-              <a href={`#${s.id}`}>{s.title}</a>
+          {toc.map((t) => (
+            <li key={t.id}>
+              <a href={`#${t.id}`}>{t.label}</a>
             </li>
           ))}
         </ul>
+        <div style={{ marginTop: '12px' }}>
+          <Link
+            to="/projects"
+            style={{ fontSize: '12px', textDecoration: 'none' }}
+          >
+            ← 一覧へ戻る
+          </Link>
+        </div>
       </aside>
       <main className="notion-content">
-        {sections.map((s) => (
-          <section key={s.id} id={s.id} className="notion-section">
-            <h2>{s.title}</h2>
-            {s.body}
-          </section>
-        ))}
+        <section id="overview" className="notion-section">
+          <h2>概要</h2>
+          <p>{s.overview}</p>
+        </section>
+        <section id="belong" className="notion-section">
+          <h2>チーム開発</h2>
+          <p>{s.belong}</p>
+        </section>
+        <section id="skill" className="notion-section">
+          <h2>使用技術</h2>
+          <ul className="notion-list">
+            {s.skill.split(',').map((k) => (
+              <li key={k.trim()}>{k.trim()}</li>
+            ))}
+          </ul>
+        </section>
+        <section id="features" className="notion-section">
+          <h2>機能面</h2>
+          <ul className="notion-list">
+            {featureList.map((f) => (
+              <li key={f}>{f}</li>
+            ))}
+          </ul>
+        </section>
+        <section id="point" className="notion-section">
+          <h2>開発のポイント</h2>
+          <p>{s.point}</p>
+        </section>
+        <section id="demo" className="notion-section">
+          <h2>デモ / スクリーンショット</h2>
+          <p>
+            デプロイ先:{' '}
+            <a href={s.demo} target="_blank" rel="noreferrer">
+              {s.demo}
+            </a>
+          </p>
+        </section>
+        <section id="links" className="notion-section">
+          <h2>外部リンク</h2>
+          {s.link.includes('github.com/') ? (
+            <GitHubRepoCard repoUrl={s.link} />
+          ) : (
+            <p>
+              <a href={s.link} target="_blank" rel="noreferrer">
+                {s.link}
+              </a>
+            </p>
+          )}
+        </section>
       </main>
     </div>
   );

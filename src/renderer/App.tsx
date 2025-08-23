@@ -45,6 +45,14 @@ function AnimatedRoutes() {
             path="/career"
             element={
               <div className="fade-in route-pane">
+                <CareerPage />
+              </div>
+            }
+          />
+          <Route
+            path="/project/:id"
+            element={
+              <div className="fade-in route-pane">
                 <ProjectPage />
               </div>
             }

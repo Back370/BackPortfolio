@@ -1,0 +1,31 @@
+ .gh-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--line-color, #e5e7eb);
+  background: var(--card-bg, #f8f9fa);
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  font-size: 14px;
+  color: var(--text-color, #222);
+  transition: background .15s, border-color .15s, box-shadow .15s;
+  position: relative;
+ }
+ .gh-card:hover {
+  background: #ffffff;
+  border-color: #d0d7de;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+ }
+ .gh-card-header { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+ .gh-card-avatar { width:28px; height:28px; border-radius:50%; flex-shrink:0; }
+ .gh-card-title { font-weight:600; font-size:14px; line-height:1.2; }
+ .gh-card-icon { margin-left:auto; font-size:18px; opacity:.55; }
+ .gh-card-desc { font-size:12.5px; line-height:1.4; margin:0 0 8px; color:#4b5563; min-height:18px; }
+ .gh-card-meta { display:flex; gap:14px; font-size:11.5px; color:#6b7280; }
+ .gh-card-meta span { display:inline-flex; align-items:center; gap:2px; }
+ .gh-card-muted { color:#9ca3af; }
+ @media (prefers-color-scheme: dark) {
+  .gh-card { background:#161b22; border-color:#30363d; color:#c9d1d9; }
+  .gh-card:hover { background:#1c2128; }
+  .gh-card-desc { color:#8b949e; }
+  .gh-card-meta { color:#8b949e; }
+ }

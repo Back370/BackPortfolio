@@ -25,7 +25,7 @@ export const projects: Project[] = [
     overview:
       '位置情報を利用して限定されたユーザー間で交流できるSNS',
     belong: 'フロントエンドを主に担当',
-    skill: 'TypeScript, React, shadcn/ui, Go, Firebase',
+    skill: 'TypeScript, React, shadcn/ui, Go, AWS',
     features: [
       '・ユーザーはポスト、スレッド、イベントを作成し地図上の現在地にホップアップされる',
       '・イベントは地図上をホバーすることができる',

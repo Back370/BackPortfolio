@@ -71,7 +71,14 @@
   .notion-content { flex:1 1 auto; width:100%; padding:32px 28px 48px; }
 }
 @media (max-width: 600px) {
-  .notion-content { padding:28px 20px 40px; }
+  .notion-content { padding:28px 20px 40px; max-width:100%; }
+  .notion-toc { display:none !important; }
+  /* モバイルで横スクロールが出る要因 (長いURL / 連続英数字) を折り返し */
+  .notion-content p,
+  .notion-content li,
+  .notion-content a { word-break: break-word; overflow-wrap: anywhere; }
+  /* 念のためコンテナ側もオーバーフロー抑止 */
+  .notion-page { width:100%; overflow-x:hidden; }
 }
 .notion-section { margin:0 0 56px; padding-bottom:8px; border-bottom:1px solid rgba(0,0,0,0.06); }
 .notion-section:last-of-type { border-bottom:none; margin-bottom:0; }
@@ -113,7 +120,7 @@ html { scroll-behavior:smooth; }
 /* Wide screen: 目次をさらに右へ寄せる */
 @media (min-width: 1280px) {
   .notion-page--toc-right { gap: 40px; }
-  .notion-page--toc-right .notion-content { max-width: 1400px; }
+  .notion-page--toc-right .notion-content { max-width: 1400px; min-width: 640px; }
 }
 @media (min-width: 1700px) {
   .notion-page--toc-right .notion-content { max-width: 1560px; }

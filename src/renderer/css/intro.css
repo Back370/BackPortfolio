@@ -9,7 +9,9 @@
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  .intro-row { padding: 16px 16px 0; gap: 28px; }
+  .intro-row { padding: 16px 16px 0; gap: 28px; flex-direction: column; }
+  .intro-row > .profile-card-outer { order: 1; }
+  .intro-row > .route-container { order: 2; }
 }
 
 /* IconCard の余計な左マージンを無効化（横並び用）*/

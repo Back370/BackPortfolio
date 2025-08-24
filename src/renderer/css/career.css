@@ -3,7 +3,7 @@
 /* optional spacing tweaks for desktop */
 @media (max-width:1023px){ .timeline-line { display:none; } }
 
-.career-section { flex: 1 1 260px; min-width: 800px; background: #f5f5f5; padding: 24px 24px 32px; border-radius: 16px; box-sizing: border-box; }
+.career-section { flex: 1 1 260px; min-width: 100px; background: #f5f5f5; padding: 24px 24px 32px; border-radius: 16px; box-sizing: border-box; }
 
 
 /* intro-row 直下の career セクション用（旧 style.css の .profile と区別） */
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 600px) {
-  .intro-row > .career-background { gap: 32px; padding-bottom: 32px; }
+  .intro-row > .career-background { gap: 32px; padding-bottom: 32px; width:100%; }
 }
 
 /* New about box & paragraph styling for Career to align with profile box */

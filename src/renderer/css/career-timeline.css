@@ -31,11 +31,12 @@
 
 /* Mobile */
 @media (max-width: 1023px) {
-  .career-timeline__line { display:none; }
+  /* 左寄せライン + ドット */
+  .career-timeline__line { display:block; left:20px; transform:none; width:3px; background:#d4d4d8; }
   .career-entry { display:block; margin-bottom:48px; }
-  .career-entry__dot { left:20px; top:28px; transform:none; }
+  .career-entry__dot { left:20px; top:28px; transform:translate(-50%, -50%); }
   .career-entry__side { width:100%; padding:0 !important; }
-  .career-card { margin-left:52px; width:auto; }
+  .career-card { margin-left:56px; width:calc(100% - 56px - 16px); max-width:none; }
 }
 
 /* Dark mode fallback (if a parent adds .dark) */

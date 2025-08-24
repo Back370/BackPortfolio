@@ -16,7 +16,6 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 767px) { }
 
 .profile-card .overlap-group {
   background-color: #959595;

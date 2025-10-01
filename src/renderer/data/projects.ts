@@ -1,5 +1,5 @@
 import iWidgetkawaii from '../img/widgetkawaii.png';
-import iPomodoro from '../img/pomodoro.jpg';
+import iPomodoro from '../img/pomodoro.png';
 import iChap from '../img/chap.jpg';
 import iCoyote from '../img/coyote.jpg';
 import iOekaki from '../img/oekaki.jpg';

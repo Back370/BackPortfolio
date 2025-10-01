@@ -1,4 +1,5 @@
 import iWidgetkawaii from '../img/widgetkawaii.png';
+import iPomodoro from '../img/pomodoro.jpg';
 import iChap from '../img/chap.jpg';
 import iCoyote from '../img/coyote.jpg';
 import iOekaki from '../img/oekaki.jpg';
@@ -21,6 +22,28 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    name: 'PomodoroShareApp~人と作業し集中力とモチベを上げるタイマーアプリ~',
+    overview:
+      'リアルタイムで他ユーザーと学習状況を共有するポモドーロシェアアプリ',
+    belong: 'フロントエンドと一部バックエンドを担当',
+    skill: '認証:Firebase Authentication \n バックエンド:Firebase DB, Supabase Storage, \n フロントエンド:Kotlin, Coil, Vico,Figma',
+    features: [
+      'ユーザーは、新たに部屋を作成するかすでに作成されている部屋に参加します。\n それぞれの部屋には開始時刻とセッション数が設定されており、開始時刻になると25分間の作業時間が開始され、それが終わったら5分間の休憩時間があります。\n この25分間の作業時間と5分間の休憩時間のサイクルをセッション数の分だけ繰り返します。\n 部屋内では　チャット機能もあり、他のユーザーと意気込みや進捗を共有したり、コミュニケーションをとったりしながら作業を進めることができます。',
+      '・部屋の作成と',
+      '・プロフィール画像の表示と編集機能',
+      '・その日の勉強時間のリマインド',
+      '・ログイン機能',
+      '・勉強時間が増えるとフレームが豪華になっていく',
+    ],
+    point: '部屋を抜けるとその部屋が上部に固定されたり、部屋の非表示機能とID検索機能があったりと、ユーザーが使いやすいように細かいところまで工夫した',
+    demo: 'https://www.canva.com/design/DAGzgTdHsqw/zjFuOpPvQVUcYojLOrOMhw/view?utm_content=DAGzgTdHsqw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1dac7ba793',
+    link: 'https://github.com/suzukibelltree/PomodoroShareApp/tree/develop',
+    date: '2025-10-01',
+    info: 'frontend, backend',
+    img: iPomodoro,
+  },
+  {
+    id: 2,
     name: 'CHAP',
     overview:
       '位置情報を利用して限定されたユーザー間で交流できるSNS',
@@ -41,7 +64,7 @@ export const projects: Project[] = [
     img: iChap,
   },
   {
-    id: 2,
+    id: 3,
     name: 'Kawaii Widget',
     overview:
       'WidgetKawaiiはスマートフォンのウィジェットに動きあるキャラクターを追加し日常的な癒しを提供するアプリ',
@@ -56,7 +79,7 @@ export const projects: Project[] = [
     img: iWidgetkawaii,
   },
   {
-    id: 3,
+    id: 4,
     name: 'コヨーテAI',
     overview: 'DeepCFRの考え方を取り入れたDQN学習+ルールベースのハイブリッドAI。',
     belong: '個人開発',
@@ -70,7 +93,7 @@ export const projects: Project[] = [
     img: iCoyote,
   },
   {
-    id: 4,
+    id: 5,
     name: 'その場でおえかきカードゲーム',
     overview: '描いた絵が即座にカード化され対戦に使用できるゲーム。',
     belong: 'バックエンド担当',

@@ -3,6 +3,7 @@ import iPomodoro from '../img/pomodoro.png';
 import iChap from '../img/chap.jpg';
 import iCoyote from '../img/coyote.jpg';
 import iOekaki from '../img/oekaki.jpg';
+import iOminousRoom from '../img/ominousroom.png';
 
 export interface Project {
   id: number;
@@ -19,9 +20,32 @@ export interface Project {
   img: string;
 }
 
+
 export const projects: Project[] = [
+
   {
     id: 1,
+    name: 'OminousRoom 不吉な部屋',
+    overview:
+      '奇妙な構造、黄色い壁と湿っぽいカーペットBackroomsの世界に迷い込んだプレイヤーが脱出を目指すゲーム。\n 先駆者が残したアイテムをうまく使い、エンティティやギミックを切り抜けろ。生き残るのは一人だけだ',
+    belong: '個人開発',
+    skill: 'UnrealEngine, SteamOnlineServices',
+    features: [
+      '・マルチプレイ機能',
+      '・インベントリ機能',
+      '・キャラクター切り替え機能',
+      '・ランダム生成される構造物',
+      '・複数のエンティティとギミック',
+    ],
+    point: 'マルチプレイゲームを作るときは覚悟が必要だよ',
+    demo: '',
+    link: '',
+    date: '2025-10-30',
+    info: '個人開発',
+    img: iOminousRoom,
+  },
+  {
+    id: 2,
     name: 'PomodoroShareApp~人と作業し集中力とモチベを上げるタイマーアプリ~',
     overview:
       'リアルタイムで他ユーザーと学習状況を共有するポモドーロシェアアプリ',
@@ -43,7 +67,7 @@ export const projects: Project[] = [
     img: iPomodoro,
   },
   {
-    id: 2,
+    id: 3,
     name: 'CHAP',
     overview:
       '位置情報を利用して限定されたユーザー間で交流できるSNS',
@@ -64,7 +88,7 @@ export const projects: Project[] = [
     img: iChap,
   },
   {
-    id: 3,
+    id:4,
     name: 'Kawaii Widget',
     overview:
       'WidgetKawaiiはスマートフォンのウィジェットに動きあるキャラクターを追加し日常的な癒しを提供するアプリ',
@@ -79,7 +103,7 @@ export const projects: Project[] = [
     img: iWidgetkawaii,
   },
   {
-    id: 4,
+    id: 5,
     name: 'コヨーテAI',
     overview: 'DeepCFRの考え方を取り入れたDQN学習+ルールベースのハイブリッドAI。',
     belong: '個人開発',
@@ -93,7 +117,7 @@ export const projects: Project[] = [
     img: iCoyote,
   },
   {
-    id: 5,
+    id: 6,
     name: 'その場でおえかきカードゲーム',
     overview: '描いた絵が即座にカード化され対戦に使用できるゲーム。',
     belong: 'バックエンド担当',
